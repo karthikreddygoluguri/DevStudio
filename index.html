@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DevStudio | Modern Web Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar glass">
+    <div class="nav-left">
+      <div class="logo-mark">DS</div>
+      <h2 class="logo-text">DevStudio</h2>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+        🌙
+      </button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-bg-shape hero-bg-1"></div>
+      <div class="hero-bg-shape hero-bg-2"></div>
+
+      <div class="hero-content reveal">
+        <p class="badge">Premium Web Experiences ✨</p>
+        <h1>
+          We build
+          <span>beautiful</span>
+          &amp; <span>fast</span> websites.
+        </h1>
+        <p class="hero-subtitle">
+          Modern UI, smooth interactions, and clean code using HTML, CSS, and
+          JavaScript.
+        </p>
+
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="scrollToSection()">
+            Explore Services
+          </button>
+          <button class="ghost-btn" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })">
+            View Portfolio
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services reveal">
+      <h2 class="section-title">Services</h2>
+      <p class="section-subtitle">
+        Everything you need to launch a stunning web presence.
+      </p>
+
+      <div class="card-container">
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>
+            Responsive, SEO-friendly websites built with clean, maintainable
+            code.
+          </p>
+        </div>
+        <div class="card">
+          <h3>UI/UX Design</h3>
+          <p>
+            Beautiful, user-focused designs that feel modern and intuitive.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Performance & SEO</h3>
+          <p>
+            Fast load times, optimized assets, and best practices for search
+            engines.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section portfolio reveal">
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-subtitle">
+        A glimpse into the kind of experiences we create.
+      </p>
+
+      <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('web')">Web</button>
+        <button onclick="filterProjects('design')">Design</button>
+      </div>
+
+      <div class="projects">
+        <div class="project web">
+          <h3>Landing Page</h3>
+          <p>High-converting product landing experience.</p>
+        </div>
+        <div class="project design">
+          <h3>Brand UI Kit</h3>
+          <p>Consistent typography, colors, and components.</p>
+        </div>
+        <div class="project web">
+          <h3>Portfolio Site</h3>
+          <p>Personal brand-focused showcase for a creator.</p>
+        </div>
+        <div class="project design">
+          <h3>Dashboard Concept</h3>
+          <p>Clean analytics dashboard with clear hierarchy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact reveal">
+      <h2 class="section-title">Let’s Work Together</h2>
+      <p class="section-subtitle">
+        Tell us about your project, and we’ll get back to you.
+      </p>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Your name" />
+        <input type="email" id="email" placeholder="Your email" />
+        <textarea id="message" rows="4" placeholder="Project details"></textarea>
+        <button type="submit" class="primary-btn">Send Message</button>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 DevStudio. All rights reserved.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
